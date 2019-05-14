@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #24c9a2;
+}
+.container{
+  height: 700px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #ddd7da;
+}
+.header{
+  height: 10%;
+  width: 100%;
+  background-color: #eff1f2;
+  float: left;
+}
+.header:after{
+  content:"";
+  display:table;
+  clear:both;
+}
+.contatti{
+  height: 90%;
+  width: 30%;
+  background-color: white;
+  float: left;
+}
+.messaggi{
+  height: 80%;
+  width: 70%;
+  float: right;
+}
+.immissione{
+  height: 10%;
+  width: 70%;
+  background-color: #eff1f2;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input{
+  height: 60%;
+  width: 80%;
+  border-radius: 50px;
+  border: none;
+}
