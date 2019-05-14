@@ -81,17 +81,29 @@ body{
   width: 70%;
   float: right;
 }
-.mes_utente, .mes_computer{
+.mes_container{
+  overflow: auto;
+}
+.mes_container.template{
+  display: none;
+}
+.message_inv{
   max-width: 60%;
   margin: 10px;
   padding: 5px;
   border-radius: 5px;
+  display: block;
 }
-.mes_utente{
+.message_inv:after{
+  clear: both;
+  display: table;
+  content: '';
+}
+.message_inv.me{
   background-color: #a0ff9b;
   float: right;
 }
-.mes_computer{
+.message_inv.computer{
   background-color: white;
   float: left;
 }
