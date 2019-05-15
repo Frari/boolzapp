@@ -53,8 +53,10 @@ $('.invia').click(function(){
     $('p').each(function(){
       if($(this).text().toLowerCase() == ricerca_cont.toLowerCase()){
         $(this).show();
+        $('.contatto', this).show();
       }else{
-        $(this).show();
+        $(this).hide();
+        $('.contatto', this).hide();
       };
     });
     $('.search').val(' ');
