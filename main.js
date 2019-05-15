@@ -46,14 +46,17 @@ $('.invia').click(function(){
   // creo funzione per cercare contatto al click della lente d'ingrandimento
   $('.lente').click(function(){
     var ricerca_cont = $('.search').val();
-    $('.search').val(' ');
+    // $('.search').val(' ');
 
-    $('.num_cont.nome_cont p').each(function(){
-      if($(this).text() == ricerca_cont){
-        alert('uguale');
+    $('p').hide();
+
+    $('p').each(function(){
+      if($(this).text().toLowerCase() == ricerca_cont.toLowerCase()){
+        $(this).show();
       }else{
-        alert('diverso');
-      }
-    })
+        $(this).show();
+      };
+    });
+    $('.search').val(' ');
 
   });
