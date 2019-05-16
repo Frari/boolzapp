@@ -43,11 +43,10 @@ $('.invia').click(function(){
 
   }
 
-  // creo funzione per cercare contatto al click della lente d'ingrandimento
-  $('.lente').keyup(function(event){
+  // creo funzione per cercare contatto con immissione nell'input
+  $('.search').keyup(function(event){
     // creo la variabile per prendere il valore di quello scritto dall'utente
-    var ricerca_cont = $('.search').val();
-    console.log(ricerca_cont);
+    var ricerca_cont = $(this).val();
     // creo funzione che cicla tutti i contatti in lista
     $('.contatto').each(function(){
       // creo una variabile per recuperare il nome all'interno di 'p' figlio del contenitore 'contatto'
@@ -59,6 +58,5 @@ $('.invia').click(function(){
         $(this).hide();
       };
     });
-    $('.search').val(' ');
 
   });
