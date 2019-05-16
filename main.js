@@ -33,7 +33,7 @@ $('.invia').click(function(){
         // rimuovo dal contenitore del messaggio la classe template
         new_message.removeClass('template');
         // aggiungo al figlio del contenitore la classe che da lo sfondo verde e inserisco il testo digitato dall'utente
-        new_message.children('.message_inv').addClass('computer').text();
+        new_message.children('.message_inv').addClass('computer').text('ok');
         // inserisco tutto nel contenitore messaggi vuoto
         $('.messaggi').append(new_message);
         // azzero l'input in modo che l'utente possa inserire altro messaggio
@@ -44,19 +44,19 @@ $('.invia').click(function(){
   }
 
   // creo funzione per cercare contatto al click della lente d'ingrandimento
-  $('.lente').click(function(){
+  $('.lente').keyup(function(event){
+    // creo la variabile per prendere il valore di quello scritto dall'utente
     var ricerca_cont = $('.search').val();
-    // $('.search').val(' ');
-
-    $('p').hide();
-
-    $('p').each(function(){
-      if($(this).text().toLowerCase() == ricerca_cont.toLowerCase()){
+    console.log(ricerca_cont);
+    // creo funzione che cicla tutti i contatti in lista
+    $('.contatto').each(function(){
+      // creo una variabile per recuperare il nome all'interno di 'p' figlio del contenitore 'contatto'
+      var name = $(this).find('p').text().toLowerCase();
+      // creo condizione che va a vedere se il nome immesso è incluso nella lista contatti
+      if(name.includes(ricerca_cont)){
         $(this).show();
-        $('.contatto', this).show();
       }else{
         $(this).hide();
-        $('.contatto', this).hide();
       };
     });
     $('.search').val(' ');
