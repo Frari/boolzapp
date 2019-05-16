@@ -5,9 +5,10 @@
 }
 body{
   background-color: #24c9a2;
+  height: 100vh;
 }
 .container{
-  height: 700px;
+  height: 95%;
   width: 90%;
   margin: 0 auto;
   margin-top: 20px;
@@ -53,21 +54,21 @@ body{
   width: 100%;
 }
 .foto_cont{
-  height: 100%;
-  width: 20%;
+  height: 70px;
+  width: 70px;
   float: left;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .foto_prof{
-  width: 85%;
-  height: 85%;
+  width: 75%;
+  height: 75%;
   border-radius: 50%;
 }
 .num_cont{
-  height: 100%;
-  width: 80%;
+  height: 70px;
+  width: calc(100% - 70px);
   border-bottom:1px solid lightgrey;
   float: left;
 }
