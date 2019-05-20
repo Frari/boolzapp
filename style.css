@@ -75,12 +75,19 @@ body{
 .nome_cont{
   padding-top: 10px;
 }
+.active{
+  display: block;
+}
 
 /* sezione centrale dove appaiono tutti i messaggi */
 .messaggi{
   height: 80%;
   width: 70%;
   float: right;
+  display: none;
+}
+.messaggi.active{
+  display: block;
 }
 .mes_container{
   overflow: auto;

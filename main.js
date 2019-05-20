@@ -44,6 +44,23 @@ $(document).ready(function(){
           $('.input').val(' ');
         }, 1000);
 
+        // creo funzione per intercettare il click sui riquadri dei contatti sulla sinistra
+        $('.contatto').click(function(){
+          // tolgo la classe active a tutti i contatti
+          $('.contatto').removeClass('.active');
+          // aggiungo la classe active al contatto cliccato
+          $(this).addClass('.active');
+          // recupero la conversazione da mostrare
+          var conversazione = $(this).attr('data-coversazione');
+          // recupero il pannello della conversazione del contatto cliccato
+          var pannello_conversazione = $('.messaggi[data-conversazione="'+conversazione+'"]');
+          // nascondo tutti i pannelli messaggi visibili
+          $('.messaggi').removeClass('active');
+          // aggiungo la classe active e rendo visibile quello del contatto cliccato
+          pannello_conversazione.addClass('active');
+
+        });
+
         // funzione per far apparire l'icona nei messaggi
         $('.message_inv').mouseenter(function(){
           // all'entrata del puntatore aggiungo la classe visibile
